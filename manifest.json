@@ -1,0 +1,25 @@
+{
+    "short_name": "KeyLogger",
+    "name": "KeyLogger",
+    "description": "a keylogger, tells you the keycode you pressed and it's ASCII code",
+    "categories" : ["Web-Engineer tools"],
+    "lang": "en-US",
+    "start_url": ".",
+    "background_color": "#3367D6",
+    "theme_color" :"#3367D6",
+    "scope": "/",
+    "display": "standalone",
+    "serviceworker": "./sw.js",
+    "icons": [
+        {
+            "src": "/icons/key192x192.png",
+            "type": "image/png",
+            "sizes": "192x192"
+        },
+        {
+            "src" : "/icons/key512x512.png",
+            "type": "image/png",
+            "sizes": "512x512"
+        }
+    ]
+}

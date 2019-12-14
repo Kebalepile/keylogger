@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="description" content = "a keylogger, tells you the keycode you pressed and it's ASCII code" />
+  <meta name="keywords" content="KeyLogger"/>
+  <meta name="author" content="K.T Motshoana" />
+  <meta name="theme-color" content="#3367D6"/>
+  <link rel="stylesheet" type="text/css" href="./main.css" />
+  <link rel="apple-touch-icon" href="./icons/key192x192.png" />
+  <link rel="manifest" href="./manifest.json"/>
+  <title>keyLogger</title>
+  <script defer src="./main.js"></script>
+  <script defer>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', async () => {
+        try {
+          let reg = await navigator.serviceWorker.register('./sw.js')
+          // sucessful registration of sw.js
+          console.log(`service worker registered at: ${reg.scope}`)
+        } catch (err) {
+           console.error(`service worker registration failed :${err.message}`)
+        }
+      })
+    }
+  </script>
+</head>
+
+<body>
+  <div id="bord">
+
+    <section id="keyCode"></section>
+    <section id="key">
+      <section>
+  </div>
+
+</body>
+
+</html>
